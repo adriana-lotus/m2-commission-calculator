@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="calculate_commission" xsi:type="object">LotusBloomProduction\ComissionCalculator\Console\Command\CalculateCommission</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <!-- Calculator factory configuration -->
+    <type name="LotusBloomProduction\ComissionCalculator\Model\CommissionCalculatorFactory">
+        <arguments>
+            <argument name="calculators" xsi:type="array">
+                <item name="deposit_private" xsi:type="string">LotusBloomProduction\ComissionCalculator\Model\Calculator\DepositCalculator</item>
+                <item name="deposit_business" xsi:type="string">LotusBloomProduction\ComissionCalculator\Model\Calculator\DepositCalculator</item>
+                <item name="withdraw_private" xsi:type="string">LotusBloomProduction\ComissionCalculator\Model\Calculator\PrivateWithdrawCalculator</item>
+                <item name="withdraw_business" xsi:type="string">LotusBloomProduction\ComissionCalculator\Model\Calculator\BusinessWithdrawCalculator</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

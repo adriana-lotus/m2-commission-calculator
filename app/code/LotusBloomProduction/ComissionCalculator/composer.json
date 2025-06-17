@@ -1,0 +1,27 @@
+{
+    "name": "lotusbloomproduction/module-comission-calculator",
+    "description": "Magento 2 module used for commission calculations given a csv file with payment operations",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Lotus Bloom Production LTD - Adriana Carmina Ciobotaru",
+            "email": "lotusbloomproduction@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "~8.1.0||~8.2.0",
+        "magento/framework": "~103.0.7-p3",
+        "magento/module-sales": "~103.0.7-p3"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "LotusBloomProduction\\ComissionCalculator\\": ""
+        }
+    },
+    "minimum-stability": "stable"
+}
